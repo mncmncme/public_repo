@@ -2,7 +2,7 @@
 
 # 유저 권한 체크 (sudo로 실행 방지)
 if [ "$EUID" -eq 0 ]; then
-  echo "오류: 이 스크립트는 sudo 없이 그냥 'sh run.sh'로 실행하세요."
+  echo "오류: 이 스크립트는 sudo 없이 그냥 'sh run.sh' 또는 './run.sh'로 실행하세요."
   exit 1
 fi
 
