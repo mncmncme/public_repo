@@ -2,7 +2,7 @@
 
 # 유저 권한 체크 (sudo로 실행 방지)
 if [ "$EUID" -eq 0 ]; then
-  echo "오류: 이 스크립트는 sudo 없이 그냥 'sh run.sh' 또는 './run.sh'로 실행하세요."
+  echo "오류: 이 스크립트는 sudo 없이 그냥 'sh oracle_vm.sh' 또는 './oracle_vm.sh'로 실행하세요."
   exit 1
 fi
 
@@ -43,5 +43,5 @@ sudo docker compose up -d
 
 echo "----------------------------------------------------"
 echo "설치가 완료되었습니다!"
-echo "이제부터는 'docker-compose' 대신 'docker compose'를 권장합니다."
+echo "Portainer 접속: http://[서버IP]:9000"
 echo "----------------------------------------------------"
